@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Random Number Generator</title>
+		<script type="text/javascript">
 
-You can use the [editor on GitHub](https://github.com/nchandrashekar79/page/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+			function generateRandomNumber(){
+				var min = parseInt(document.getElementById('min').value);
+				var max = parseInt(document.getElementById('max').value);
+				var rand = Math.floor(Math.random() * (max - min + 1)) + min;
+				document.getElementById('display').innerText = rand;
+			}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nchandrashekar79/page/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+		</script>
+	</head>
+	<body>
+	<h2>Random Number Generator </h2>
+	<br>
+		<label>Min</label>
+		<input id="min" name="text"><br>
+		<label>Max</label>
+		<input id="max" name="text"><br>
+		<button onclick="generateRandomNumber();">Generate</button>
+		<div id="display" style="font-size: 60px;"></div>
+	</body>
+</html>
